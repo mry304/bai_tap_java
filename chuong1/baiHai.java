@@ -1,23 +1,21 @@
+package chuong1;
+
 import java.util.Scanner;
 
-public class baiMot {
+public class baiHai {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Nhap n: ");
         int n = sc.nextInt();
 
-        int sum = 0;
+        double sum = 0;
 
-        if (n % 2 != 0) {
-            n--;
+        for (int i = 1; i <= n; i++) {
+            sum += 1.0 / i;
         }
 
-        for (int i = 2; i <= n; i += 2) {
-            sum += i;
-        }
-
-        System.out.println("Tong cac so chan = " + sum);
+        System.out.println("Tong nghich dao = " + sum);
 
         sc.close();
     }
