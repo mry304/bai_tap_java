@@ -65,14 +65,13 @@ public class lab2 {
          private boolean isValidScore(double score) {
              return score >= 0.0 && score <= 10.0;
          }
-
-         // Cập nhật các hàm Setters
+         
          public void setDcc(double dcc) {
              if (isValidScore(dcc)) {
                  this.dcc = dcc;
              } else {
                  System.out.println("Lỗi: Điểm CC (" + dcc + ") phải nằm trong khoảng 0 - 10!");
-                 this.dcc = 0; // Hoặc ném Exception: throw new IllegalArgumentException("Điểm không hợp lệ");
+                 this.dcc = 0;
              }
          }
 
