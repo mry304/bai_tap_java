@@ -3,35 +3,20 @@ package chuong1;
 import java.util.Scanner;
 
 public class baiNam {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Nhap n nguyen duong: ");
-        int n = scanner.nextInt();
-
-        if (n <= 0) {
-            System.out.println("Vui long nhap so nguyên duong n > 0.");
-        } else {
-            System.out.print(n + " so Fibonacci dau tien: ");
-
-            long f0 = 1;
-            long f1 = 1;
-
-            for (int i = 1; i <= n; i++) {
-                if (i == 1) {
-                    System.out.print(f0 + " ");
-                } else if (i == 2) {
-                    System.out.print(f1 + " ");
-                } else {
-                    long fn = f0 + f1;
-                    System.out.print(fn + " ");
-                    f0 = f1;
-                    f1 = fn;
-                }
-            }
-            System.out.println();
+    public static  int fib(long n){
+        if(n == 1 || n == 1) return 1;
+        long fib1 = 0, fib2 = 1, fib;
+        for(int i = 2; i <= 92; ++i){
+            fib = fib1 + fib2;
+            if(fib == n) return 1;
+            fib1 = fib2;
+            fib2 = fib;
         }
-
-        scanner.close();
+        return  0;
     }
+  public static void main(String[] args) {
+      int rs = fib(21);
+      if(rs == 1) System.out.println("true");
+      else System.out.println("false");
+  }
 }
