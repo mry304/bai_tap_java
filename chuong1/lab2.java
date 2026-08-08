@@ -1,5 +1,7 @@
 package chuong1;
 
+import java.util.Scanner;
+
 public class lab2 {
 
      static class sinhVien{
@@ -65,7 +67,7 @@ public class lab2 {
          private boolean isValidScore(double score) {
              return score >= 0.0 && score <= 10.0;
          }
-         
+
          public void setDcc(double dcc) {
              if (isValidScore(dcc)) {
                  this.dcc = dcc;
@@ -95,9 +97,18 @@ public class lab2 {
     }
 
     public static void main(String[] args) {
-        sinhVien sinhVien1 = new sinhVien("01", "binh", 8, 7, 9);
+        Scanner sc = new Scanner(System.in);
+        String id = sc.nextLine();
+        String name = sc.nextLine();
+        double dcc = sc.nextDouble();
+        double dgk = sc.nextDouble();
+        double dck = sc.nextDouble();
+
+        sinhVien sinhVien1 = new sinhVien(id, name, dcc, dgk, dck);
         double tong = sinhVien1.tinhDiemTong();
         System.out.println(tong);
         sinhVien1.rank();
+        sinhVien sinhVien2 = new sinhVien();
+
     }
 }
