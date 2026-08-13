@@ -11,12 +11,12 @@ public class login extends JFrame{
     private String tk = "admin";
     private String mk = "123";
     public login() {
-
         setContentPane(panel1);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
         tb.setVisible(false);
+
         login_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
